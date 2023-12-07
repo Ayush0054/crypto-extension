@@ -22,9 +22,9 @@ export default function Home() {
         "Content-Type": "application/json",
       },
     });
-    const { htmlString } = await res.json();
-    setHtml(htmlString);
-    console.log(htmlString);
+    const { fdsa } = await res.json();
+    setHtml(fdsa);
+    console.log(fdsa);
     setIsLoading(false);
   };
   useEffect(() => {
