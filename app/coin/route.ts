@@ -1,7 +1,7 @@
 import { NextResponse } from "next/server";
 import puppeteer from "puppeteer";
 import * as cheerio from "cheerio";
-
+import fetch from "node-fetch";
 export async function GET(request: Request) {
   try {
     const response = await fetch(
@@ -13,6 +13,7 @@ export async function GET(request: Request) {
     const fdsa = $(
       "#__next > div.sc-faa5ca00-1.cKgcaj.global-layout-v2 > div > div.cmc-body-wrapper > div > div > div.sc-aef7b723-0.sc-a6bd470-0.gavgYW.coin-stats"
     ).text();
+
     console.log(fdsa);
 
     return NextResponse.json({ fdsa });
